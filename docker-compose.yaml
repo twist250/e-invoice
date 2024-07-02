@@ -1,0 +1,26 @@
+services:
+  db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_DB: $DB_NAME
+      POSTGRES_USER: $DB_USER
+      POSTGRES_PASSWORD: $DB_PASS
+    volumes:
+      - invoice-db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  rabbitmq:
+    container_name: 'guide-rabbit'
+    image: 'rabbitmq:latest'
+    environment:
+      RABBITMQ_DEFAULT_PASS: $RABBITMQ_PASS
+      RABBITMQ_DEFAULT_USER: $RABBITMQ_USER
+    volumes:
+      - 'rabbitmq-data:/var/lib/rabbitmq'
+    ports:
+      - '5672:5672'
+
+volumes:
+    invoice-db:
+    rabbitmq-data:

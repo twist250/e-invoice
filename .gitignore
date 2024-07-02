@@ -1,0 +1,64 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+src/main/resources/application.properties
+src/main/resources/uploads
+src/test/resources/application-test.properties
+src/test/resources/uploads
+uploads
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+http
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+application.properties
+application.yml
+local.docker-compose.yaml
+.jpb
+.env
+
+### .DS_Store ###
+.DS_Store
+src/.DS_Store
+src/main/.DS_Store
+src/main/kotlin/.DS_Store
+src/main/kotlin/com/.DS_Store
+src/main/kotlin/com/delivery/.DS_Store
+*/.env
+*/.env.*
+logs
+.fleet
+
+# Local-only folder to keep random debugging data like json files, responses, etc
+**/.local
